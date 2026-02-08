@@ -1,0 +1,107 @@
+.journal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.journal-form__title {
+  font-size: 32px;
+  line-height: normal;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  border: 2px solid transparent;
+}
+
+.journal-form__title::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.journal-form__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.journal-form__label span {
+  width: 100px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.journal-form__input {
+  width: 100%;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  background-color: transparent;
+  border: none;
+  border: 2px solid transparent;
+}
+
+.journal-form__input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+.journal-form__input::placeholder {
+  color: inherit;
+}
+
+.journal-form__text {
+  height: calc(100vh - 365px);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+  line-height: 2;
+  color: inherit;
+  border: 2px solid transparent;
+}
+
+.journal-form__text::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.journal-form__text::-webkit-scrollbar {
+  width: 12px;
+}
+
+.journal-form__text::-webkit-scrollbar-thumb {
+  background-color: var(--main-button-background-active);
+  border-radius: 3px;
+}
+
+.journal-form__text::-webkit-scrollbar-track {
+  background-color: var(--main-button-background-hover);
+  border-radius: 3px;
+}
+
+@media (max-width: 815px) {
+  .journal-form__title {
+    font-size: 42px;
+  }
+
+  .journal-form__input {
+    font-size: 21px;
+  }
+
+  .journal-form__label span {
+    font-size: 21px;
+  }
+
+  .journal-form__text {
+    font-size: 21px;
+  }
+}
+
+.journal-form__btn-row {
+  display: flex;
+  gap: 10px;
+}

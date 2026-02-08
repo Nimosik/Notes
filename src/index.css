@@ -1,0 +1,92 @@
+:root {
+  --main-font-family: "Roboto", sans-serif;
+
+  --main-text-color: #fff;
+  --background-color: #181818;
+  --danger-color: #E00000;
+  --danger-color-dark: #8C0000;
+  --accent-color: #312EB5;
+  --accent-color-hover: #4F4CEC;
+  --accent-color-active: #807DFF;
+  --main-button-background: #1F1F1F;
+  --main-button-background-hover: #2F2F2F;
+  --main-button-background-active: #7D7D7D;
+
+  --main-transition: .3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font-family);
+  font-weight: 400;
+  color: var(--main-text-color);
+  background-color: var(--background-color);
+  line-height: 2;
+  font-size: 16px;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.App {
+  display: flex;
+}
+
+.animate-error {
+  border: 2px solid var(--danger-color);
+  animation: error-blink 0.7s infinite;
+}
+
+.active {
+  background: var(--main-button-background-hover);
+}
+
+.hide {
+  transform: translateX(-100%);
+}
+
+.rotate-menu-btn {
+  transform: rotate(-180deg);
+}
+
+.danger-btn {
+  background-color: var(--danger-color);
+}
+
+.danger-btn:hover {
+  background-color: var(--danger-color-dark);
+}
+
+@keyframes error-blink {
+  0% {
+    border-color: var(--danger-color);
+  }
+
+  50% {
+    border-color: var(--danger-color-dark);
+  }
+
+  100% {
+    border-color: var(--danger-color);
+  }
+}
+
+@media (max-width: 815px) {
+  .App {
+    display: initial;
+    position: relative;
+  }
+}
